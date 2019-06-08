@@ -9,9 +9,6 @@ class App extends React.Component {
     this.state = {};
   }
   render() {
-    console.log("====================================");
-    console.log(this.props);
-    console.log("====================================");
     return <Layout />;
   }
 }
