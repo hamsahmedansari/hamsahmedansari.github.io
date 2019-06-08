@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Parallax from "../../components/parallax";
 import About from "../../components/about";
 import Brand from "../../components/brand";
+import Feature from "../../components/feature";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Parallax />
       <About />
       <Brand />
+      <Feature />
     </React.Fragment>
   );
 };
