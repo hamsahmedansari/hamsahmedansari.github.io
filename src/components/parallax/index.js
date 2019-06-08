@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Rellax from "rellax";
 
+import Typing from "../typing";
+
 class Parallax extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,12 @@ class Parallax extends Component {
                   >
                     Hell0
                   </h3>
-                  <h1 className="text-uppercase">I am hams ahmed ansari</h1>
+                  <h1 className="text-uppercase">
+                    I am{" "}
+                    <span>
+                      <Typing text="hams ahmed ansari" speed="1000" delay="0" />
+                    </span>
+                  </h1>
                   <h5 className="text-uppercase rellax" data-rellax-speed="1.1">
                     full stack mern developer
                   </h5>
@@ -48,7 +55,7 @@ class Parallax extends Component {
               <div className="col-lg-5">
                 <div className="home_right_img">
                   <img
-                    className="rellax"
+                    className="rellax animated slideInRight"
                     data-rellax-speed="1.5"
                     data-rellax-percentage="0.5"
                     src="img/banner/home-right.png"
