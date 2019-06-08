@@ -55,7 +55,7 @@ class Parallax extends Component {
               <div className="col-lg-5">
                 <div className="home_right_img">
                   <img
-                    className="rellax animated slideInRight"
+                    className="rellax "
                     data-rellax-speed="1.5"
                     data-rellax-percentage="0.5"
                     src="img/banner/home-right.png"
