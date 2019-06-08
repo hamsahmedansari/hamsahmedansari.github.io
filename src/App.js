@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "./views/home";
 import Routing from "./routes";
 
 import "@fortawesome/fontawesome-free/css/all.css";
