@@ -1,18 +1,19 @@
 import React from "react";
-import Routing from "./routes";
+import Layout from "./Layout";
 
-import "@fortawesome/fontawesome-free/css/all.css";
-import "@fortawesome/fontawesome-free/js/all";
 import "animate.css/animate.css";
 
-const App = () => {
-  return (
-    <div id="routing">
-      <Routing />
-    </div>
-  );
-
-  // Common Component i.e modal dialog etc */
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    console.log("====================================");
+    console.log(this.props);
+    console.log("====================================");
+    return <Layout />;
+  }
+}
 
 export default App;

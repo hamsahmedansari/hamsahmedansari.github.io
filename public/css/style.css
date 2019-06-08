@@ -3304,3 +3304,8 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+
+.nav-link.active {
+  color: #4458dc !important;
+}
