@@ -1,28 +1,28 @@
 import React from 'react';
 
-const Portfolio = () => {
+const Portfolio = (props) => {
     return (
-        <section className="portfolio_area" id="portfolio">
-		<div className="container">
-			<div className="row">
-				<div className="col-lg-12">
-					<div className="main_title text-left">
-						<h2>quality work <br/>
-							Recently done project </h2>
-					</div>
-				</div>
-			</div>
-			<div className="filters portfolio-filter">
-				<ul>
-					<li className="active" data-filter="*">all</li>
-					<li data-filter=".popular">popular</li>
-					<li data-filter=".latest"> latest</li>
-					<li data-filter=".following">following</li>
-					<li data-filter=".upcoming">upcoming</li>
-				</ul>
-			</div>
-	
-			<div className="filters-content">
+        <section className={`portfolio_area ${props.topSpacing ? "section_gap_top":""}`} id="portfolio">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="main_title text-left">
+                        <h2>quality work <br/>
+                            Recently done project </h2>
+                    </div>
+                </div>
+            </div>
+            <div className="filters portfolio-filter">
+                <ul>
+                    <li className="active" data-filter="*">all</li>
+                    <li data-filter=".popular">popular</li>
+                    <li data-filter=".latest"> latest</li>
+                    <li data-filter=".following">following</li>
+                    <li data-filter=".upcoming">upcoming</li>
+                </ul>
+            </div>
+    
+            <div className="filters-content">
 				<div className="row portfolio-grid justify-content-center">
 					<div className="col-lg-4 col-md-6 all latest">
 						<div className="portfolio_box">
@@ -179,8 +179,8 @@ const Portfolio = () => {
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+        </div>
+    </section>
     );
 }
 
