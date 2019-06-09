@@ -56,7 +56,7 @@ const Header = props => {
                     className="nav-link"
                     to="/skill"
                   >
-                    Skill
+                    Skills
                   </NavLink>
                 </li>
                 <li className="nav-item">
