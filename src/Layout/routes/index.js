@@ -5,6 +5,7 @@ import About from "../../views/about";
 import Skills from "../../views/skills";
 import Portfolio from "../../views/portfolio";
 import Contact from "../../views/contact";
+import error from "../../views/404";
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
       <Route path="/skill" exact component={Skills} />
       <Route path="/portfolio" exact component={Portfolio} />
       <Route path="/contact" exact component={Contact} />
+      <Route path="/404" exact component={error} />
       <Route path="/" exact component={home} />
       <Redirect to="/404" />
     </Switch>
