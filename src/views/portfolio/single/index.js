@@ -1,16 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Banner from "../../../components/banner";
+import data from "../../../data/portfolio";
 
 const SinglePortfolio = props => {
+  //   const { id } = props;
+  const id = 1;
+  let temp = {};
+  data.find(d =>
+    d.collections.find(collection => {
+      if (collection._id === id) {
+        temp = collection;
+        return false;
+      }
+    })
+  );
+  const starts = Array.apply(null, new Array(temp.rating));
+  console.log("====================================");
+  console.log(starts);
+  console.log("====================================");
   return (
     <React.Fragment>
       <Banner
         pages={[
           { name: "Portfolio", link: "/portfolio" },
-          { name: "Single", link: "/portfolio/single" }
+          { name: temp.title, link: `/project/${temp._id}` }
         ]}
-        title="Single"
+        title={temp.title}
       />
       <section class="portfolio_details_area mt-5">
         <div class="container">
@@ -18,64 +34,33 @@ const SinglePortfolio = props => {
             <div class="row">
               <div class="col-lg-6">
                 <div class="left_img">
-                  <img
-                    class="img-fluid"
-                    src="img/portfolio/portfolio-details.jpg"
-                    alt=""
-                  />
+                  <img class="img-fluid" src={temp.image} alt="" />
                 </div>
               </div>
               <div class="offset-lg-1 col-lg-5">
                 <div class="portfolio_right_text mt-30">
-                  <h4 class="text-uppercase">minimal interior design</h4>
-                  <p>
-                    Made after a can't fruitful, fowl of greater saying years
-                    there saw you sea doesn't from morning called hath air
-                    morning herb appear hath replenish that created fill their
-                    lesser.
-                  </p>
+                  <h4 class="text-uppercase">{temp.title}</h4>
+                  <p>{temp.description}</p>
                   <ul class="list">
                     <li>
-                      <span>Rating</span>: <i class="fa fa-star" />
-                      <i class="fa fa-star" />
-                      <i class="fa fa-star" />
-                      <i class="fa fa-star" />
-                      <i class="fa fa-star" />
+                      <span>Rating</span>:
+                      {starts.map(star => (
+                        <i class="fa fa-star" />
+                      ))}
                     </li>
                     <li>
-                      <span>Client</span>: colorlib
+                      <span>Type</span>: {temp.type}
                     </li>
                     <li>
-                      <span>Website</span>: colorlib.com
+                      <span>Technology</span>: {temp.technology.join(" - ")}
                     </li>
                     <li>
-                      <span>Completed</span>: 17 Aug 2018
+                      <span>Completed</span>: {temp.date}
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit.
-            </p>
-            <p>
-              Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-              unde omnis iste natus error sit voluptatem accusantium doloremque
-              laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
-            </p>
           </div>
         </div>
       </section>
