@@ -8,7 +8,7 @@ const Header = props => {
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
             <Link className="navbar-brand logo_h" to="/">
-              <img src="img/logo.png" alt="" />
+              <img src="/img/logo.png" alt="" />
             </Link>
             <button
               className="navbar-toggler"

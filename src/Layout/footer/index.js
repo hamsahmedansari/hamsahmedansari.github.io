@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer_top flex-column">
               <div className="footer_logo">
                 <Link to="/">
-                  <img src="img/logo.png" alt="" />
+                  <img src="/img/logo.png" alt="" />
                 </Link>
                 <h4>Follow Me</h4>
               </div>

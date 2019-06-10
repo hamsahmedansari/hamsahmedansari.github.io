@@ -1,18 +1,22 @@
 import React from "react";
 import Banner from "../../../components/banner";
 import data from "../../../data/portfolio";
+import { Redirect } from "react-router-dom";
 
 const SinglePortfolio = props => {
-  const id = 1;
+  const { id } = props.match.params;
   let temp = {};
   data.find(d =>
     d.collections.find(collection => {
-      if (collection._id === id) {
+      if (collection._id === Number(id)) {
         temp = collection;
         return false;
       }
     })
   );
+  if (Object.entries(temp).length === 0) {
+    return <Redirect to="/404" />;
+  }
   const starts = Array.apply(null, new Array(temp.rating));
   return (
     <React.Fragment>

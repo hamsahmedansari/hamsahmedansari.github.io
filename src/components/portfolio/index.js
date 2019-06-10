@@ -1,47 +1,85 @@
-import React from 'react';
+import React from "react";
+import data from "../../data/portfolio";
+import { Link } from "react-router-dom";
 
-const Portfolio = (props) => {
-    return (
-        <section className={`portfolio_area ${props.topSpacing ? "section_gap_top":""}`} id="portfolio">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="main_title text-left">
-                        <h2>quality work <br/>
-                            Recently done project </h2>
-                    </div>
-                </div>
+const Portfolio = props => {
+  return (
+    <section
+      className={`portfolio_area ${props.topSpacing ? "section_gap_top" : ""}`}
+      id="portfolio"
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="main_title text-left">
+              <h2>
+                quality work <br />
+                Recently done project{" "}
+              </h2>
             </div>
-            <div className="filters portfolio-filter">
-                <ul>
-                    <li className="active" data-filter="*">all</li>
-                    <li data-filter=".popular">popular</li>
+          </div>
+        </div>
+        <div className="filters portfolio-filter">
+          <ul>
+            <li className="active" data-filter="*">
+              all
+            </li>
+            {data.map((d, i) => (
+              <li data-filter={`.${d.title}`} key={i}>
+                {d.title}
+              </li>
+            ))}
+            {/* <li data-filter=".popular">popular</li>
                     <li data-filter=".latest"> latest</li>
                     <li data-filter=".following">following</li>
-                    <li data-filter=".upcoming">upcoming</li>
-                </ul>
-            </div>
-    
-            <div className="filters-content">
-				<div className="row portfolio-grid justify-content-center">
-					<div className="col-lg-4 col-md-6 all latest">
-						<div className="portfolio_box">
-							<div className="single_portfolio">
-								<img className="img-fluid w-100" src="img/portfolio/p1.jpg" alt=""/>
-								<div className="overlay"></div>
-								<a href="img/portfolio/p1.jpg" className="img-gal">
-									<div className="icon">
-										<span className="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div className="short_info">
-								<h4><a href="portfolio-details.html">minimal design</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 all popular">
+                    <li data-filter=".upcoming">upcoming</li> */}
+          </ul>
+        </div>
+
+        <div className="filters-content">
+          <div className="row portfolio-grid justify-content-center">
+            {data.map(d =>
+              d.collections.map(collection => (
+                <div className={`col-lg-4 col-md-6 all ${d.title}`}>
+                  <div className="portfolio_box">
+                    <div className="single_portfolio">
+                      <img
+                        className="img-fluid w-100"
+                        src={collection.image}
+                        alt=""
+                      />
+                      <div className="overlay" />
+                      <Link
+                        to={`/project/${collection._id}`}
+                        className="img-gal"
+                      >
+                        <div className="icon">
+                          <span className="lnr lnr-cross" />
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="short_info">
+                      <h4>
+                        <Link to={`/project/${collection._id}`}>
+                          {collection.title}
+                        </Link>
+                      </h4>
+                      <p style={{ textTransform: "uppercase" }}>
+                        {collection.technology.length > 5
+                          ? collection.technology
+                              .slice(0, 5)
+                              .join(",")
+                              .concat(
+                                ` +${Number(collection.technology.length) - 5}`
+                              )
+                          : collection.technology.slice(0, 5).join(",")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            )}
+            {/* <div className="col-lg-4 col-md-6 all popular">
 						<div className="portfolio_box">
 							<div className="single_portfolio">
 								<img className="img-fluid w-100" src="img/portfolio/p2.jpg" alt=""/>
@@ -176,12 +214,12 @@ const Portfolio = (props) => {
 								<p>Animated, portfolio</p>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+					</div> */}
+          </div>
         </div>
+      </div>
     </section>
-    );
-}
+  );
+};
 
 export default Portfolio;
