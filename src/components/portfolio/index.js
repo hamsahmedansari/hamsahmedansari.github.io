@@ -14,7 +14,7 @@ const Portfolio = props => {
             <div className="main_title text-left">
               <h2>
                 quality work <br />
-                Recently done project{" "}
+                Recently done project
               </h2>
             </div>
           </div>
@@ -25,7 +25,7 @@ const Portfolio = props => {
               all
             </li>
             {data.map((d, i) => (
-              <li data-filter={`.${d.title}`} key={i}>
+              <li data-filter={`.${String(d.title).replace(/ /g, "")}`} key={i}>
                 {d.title}
               </li>
             ))}
@@ -40,7 +40,12 @@ const Portfolio = props => {
           <div className="row portfolio-grid justify-content-center">
             {data.map(d =>
               d.collections.map(collection => (
-                <div className={`col-lg-4 col-md-6 all ${d.title}`}>
+                <div
+                  className={`col-lg-4 col-md-6 all ${String(d.title).replace(
+                    / /g,
+                    ""
+                  )}`}
+                >
                   <div className="portfolio_box">
                     <div className="single_portfolio">
                       <img
@@ -65,14 +70,14 @@ const Portfolio = props => {
                         </Link>
                       </h4>
                       <p style={{ textTransform: "uppercase" }}>
-                        {collection.technology.length > 5
+                        {collection.technology.length > 3
                           ? collection.technology
-                              .slice(0, 5)
+                              .slice(0, 3)
                               .join(",")
                               .concat(
-                                ` +${Number(collection.technology.length) - 5}`
+                                ` +${Number(collection.technology.length) - 3}`
                               )
-                          : collection.technology.slice(0, 5).join(",")}
+                          : collection.technology.slice(0, 3).join(",")}
                       </p>
                     </div>
                   </div>
