@@ -249,9 +249,29 @@ const webDeveloper = [
 const prototype = [
   {
     _id: 15,
+    title: "Easy Quizzy",
+    description: `Quiz Application `,
+    image: "/img/portfolio/xd1.jpg",
+    rating: 5,
+    type: "Android & IOS Application",
+    technology: ["Adobe XD"],
+    date: "Jun 2019"
+  },
+  {
+    _id: 16,
+    title: "Gaming Newz ",
+    description: `Gaming Newz App for Game Update's`,
+    image: "/img/portfolio/xd2.jpg",
+    rating: 5,
+    type: "Android & IOS Application",
+    technology: ["Adobe XD"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 16,
     title: "Ciztech",
     description: `This website is IT company which provide IT services to there customer's so this website consist of different parts such as Portfolio, Home, Contact, Skill etc`,
-    image: "/img/portfolio/xd1.jpg",
+    image: "/img/portfolio/xd3.jpg",
     rating: 5,
     type: "Website",
     technology: [
