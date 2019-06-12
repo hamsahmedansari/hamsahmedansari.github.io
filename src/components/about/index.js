@@ -20,14 +20,18 @@ const About = () => {
                 myself{" "}
               </h2>
               <p>
-                Whose given. Were gathered. There first subdue greater. Bearing
-                you Whales heaven midst their. Beast creepeth. Fish days.
+                A passionate JavaScript developer and loves to solve algorithmic
+                problems. With Excellent knowledge of programming or Developing
               </p>
               <p>
-                Is give may shall likeness made yielding spirit a itself
-                together created after sea is in beast beginning signs open god
-                you're gathering whose gathered cattle let. Creature whales
-                fruit unto meat the life beginning all in under give two.
+                My name is Hams Ahmed Ansari and I am a{" "}
+                <b>Javascript Developer</b> who specializes in creating dynamic
+                and beautiful web pages or mobile Application by using
+                <b> React & React Native</b>. I have been in the field for
+                nearly 2 years, and have been loving every minute of it. I am a
+                blogger, entrepreneur, designer, developer,opensource lover, and
+                overall thinker. Check out some of the links below to see what
+                I’ve been up to lately.
               </p>
               <Link className="primary_btn" to="/CV">
                 <span>Download CV</span>
