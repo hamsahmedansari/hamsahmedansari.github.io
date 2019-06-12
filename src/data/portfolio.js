@@ -288,6 +288,121 @@ const prototype = [
   }
 ];
 
+const openSource = [
+  {
+    _id: 17,
+    title: "Gitmo-Cli",
+    description: `This is an amazing CLI or you can use as boilerplate for git commit`,
+    image: "/img/portfolio/o1.png",
+    rating: 5,
+    type: "CLI",
+    technology: ["javascript", "git", "shell"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 18,
+    title: "Flex Css",
+    description: `Css classes of all Flex system in CSS3`,
+    image: "/img/portfolio/o2.png",
+    rating: 5,
+    type: "CLI",
+    technology: ["css", "flex"],
+    date: "Jan 2019"
+  }
+];
+
+const projects = [
+  {
+    _id: 19,
+    title: "Learning React Native",
+    description: `This is an Practice App for React Native with Expo in this app i have covered all Apis of React Native & Expo `,
+    image: "/img/portfolio/p1.jpg",
+    rating: 5,
+    type: "Android Application",
+    technology: ["Javascript", "React", "React Native", "Expo", "Api"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 20,
+    title: "Advance PWA",
+    description: `An advance PWA with all necessary features Like push ,async,offlice access etc`,
+    image: "/img/portfolio/p2.png",
+    rating: 5,
+    type: "Web Application",
+    technology: ["Javascript", "React", "Html", "css", "PWA", "Material"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 21,
+    title: "Simple Chat",
+    description: `Simple Chat using ReactJS `,
+    image: "/img/portfolio/p3.png",
+    rating: 5,
+    type: "Web Application",
+    technology: ["Javascript", "React", "Html", "css"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 22,
+    title: "NodeJS TODO CLI",
+    description: `NodeJs Todo Cli`,
+    image: "/img/portfolio/p4.png",
+    rating: 5,
+    type: "CLI",
+    technology: ["Javascript", "node"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 23,
+    title: "RealTime Chat",
+    description: `An Realtime chat using reactjs and firebase with offline msg capability `,
+    image: "/img/portfolio/p5.png",
+    rating: 5,
+    type: "Web Application",
+    technology: ["Javascript", "React", "Html", "css", "firebase", "Redux"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 24,
+    title: "Weather News CLI",
+    description: `An CLI for Weather News update's`,
+    image: "/img/portfolio/p6.png",
+    rating: 5,
+    type: "CLI",
+    technology: ["Javascript", "Node", "Api", "shell"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 25,
+    title: "Weather News App",
+    description: `An CLI for Weather News update's`,
+    image: "/img/portfolio/p7.png",
+    rating: 5,
+    type: "Web Application",
+    technology: ["Javascript", "Node", "Api", "html", "css", "Express"],
+    date: "Jan 2019"
+  },
+  {
+    _id: 26,
+    title: "Todo ReactJs",
+    description: `An ReactJs Todo Application`,
+    image: "/img/portfolio/p8.png",
+    rating: 5,
+    type: "Web Application",
+    technology: [
+      "Javascript",
+      "React",
+      "Redux",
+      "html",
+      "css",
+      "Express",
+      "Node",
+      "MongoDb"
+    ],
+    date: "Jan 2019"
+  }
+];
+
 export default [
   {
     title: "Web Development",
@@ -296,5 +411,13 @@ export default [
   {
     title: "Prototype",
     collections: prototype
+  },
+  {
+    title: "Open Source",
+    collections: openSource
+  },
+  {
+    title: "Projects",
+    collections: projects
   }
 ];
