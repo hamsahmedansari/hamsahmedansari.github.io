@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import Parallax from "../../components/parallax";
 import About from "../../components/about";
@@ -19,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default connect()(Home);
+export default Home;
