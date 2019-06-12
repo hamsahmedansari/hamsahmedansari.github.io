@@ -19,9 +19,9 @@ const Portfolio = props => {
             </div>
           </div>
         </div>
-        <div className="filters portfolio-filter">
+        <div className="filters portfolio-filter ">
           <ul>
-            <li className="active" data-filter="*">
+            <li className="active " data-filter="*">
               all
             </li>
             {data.map((d, i) => (
@@ -47,7 +47,7 @@ const Portfolio = props => {
                     ""
                   )}`}
                 >
-                  <div className="portfolio_box">
+                  <div className="portfolio_box  wow slideInUp">
                     <div className="single_portfolio">
                       <img
                         className="img-fluid w-100"

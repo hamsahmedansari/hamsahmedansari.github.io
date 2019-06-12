@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="about_area section_gap wow fadeInLeft">
+    <section className="about_area section_gap">
       <div className="container">
         <div className="row justify-content-start align-items-center">
-          <div className="col-lg-5">
+          <div className="col-lg-5  wow fadeInLeft">
             <div className="about_img">
               <img className="" src="img/about-us.png" alt="" />
             </div>
           </div>
 
-          <div className="offset-lg-1 col-lg-5">
+          <div className="offset-lg-1 col-lg-5  wow fadeInRight">
             <div className="main_title text-left">
               <h2>
                 let’s <br />

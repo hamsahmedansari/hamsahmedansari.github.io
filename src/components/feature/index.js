@@ -18,7 +18,7 @@ const Feature = () => {
         </div>
         <div className="row feature_inner">
           <div className="col-lg-3 col-md-6">
-            <div className="feature_item">
+            <div className="feature_item  wow fadeInUp">
               <img src="img/services/s1.png" alt="" />
               <h4>Wp developing</h4>
               <p>
@@ -28,7 +28,7 @@ const Feature = () => {
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
-            <div className="feature_item">
+            <div className="feature_item  wow fadeInUp">
               <img src="img/services/s2.png" alt="" />
               <h4>UI/ux design</h4>
               <p>
@@ -38,7 +38,7 @@ const Feature = () => {
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
-            <div className="feature_item">
+            <div className="feature_item  wow fadeInUp">
               <img src="img/services/s3.png" alt="" />
               <h4>Web design</h4>
               <p>
@@ -48,7 +48,7 @@ const Feature = () => {
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
-            <div className="feature_item">
+            <div className="feature_item  wow fadeInUp">
               <img src="img/services/s4.png" alt="" />
               <h4>seo optimize</h4>
               <p>
