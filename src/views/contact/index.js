@@ -5,24 +5,24 @@ const Contact = props => {
   return (
     <React.Fragment>
       <Banner pages={[{ name: "Contact", link: "/contact" }]} title="Contact" />
-      <section class="contact_area section_gap">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="d-flex justify-content-between contact_info">
-                <div class="info_item">
-                  <i class="lnr lnr-home" />
+      <section className="contact_area section_gap">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="d-flex justify-content-between contact_info">
+                <div className="info_item">
+                  <i className="lnr lnr-home" />
                   <h6>Karachi, Pakistan</h6>
                 </div>
-                <div class="info_item">
-                  <i class="lnr lnr-phone-handset" />
+                <div className="info_item">
+                  <i className="lnr lnr-phone-handset" />
                   <h6>
                     <a href="tel:+923402049917">+92 (340) 2049 917</a>
                   </h6>
                   <p>24/7 Available</p>
                 </div>
-                <div class="info_item">
-                  <i class="lnr lnr-envelope" />
+                <div className="info_item">
+                  <i className="lnr lnr-envelope" />
                   <h6>
                     <a href="mailto:hams.ahmed.ansari95@gmail.com">
                       hams.ahmed.ansari95@gmail.com

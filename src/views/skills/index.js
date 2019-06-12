@@ -36,11 +36,12 @@ const Skills = props => {
           </div>
         </div>
         {skillData.map((data, i) => (
-          <div key={i} class="section-top-border">
-            <h3 class="mb-30 title_color">{data.name}</h3>
+          <div key={i} className="section-top-border">
+            <h3 className="mb-30 title_color">{data.name}</h3>
             <div className="row">
               {data.collections.map((collection, i) => (
                 <Skill
+                  key={i}
                   color={colors[Math.floor(Math.random() * (9 - 0 + 1)) + 0]}
                   percentage={collection.percentage}
                   title={collection.name}
