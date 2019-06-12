@@ -42,6 +42,8 @@ class Parallax extends Component {
                   >
                     <a
                       className="primary_btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href="https://www.upwork.com/o/profiles/users/_~014f12876e410ed5e2/"
                     >
                       <span>Hire Me</span>
