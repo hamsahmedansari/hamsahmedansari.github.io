@@ -39,8 +39,9 @@ const Portfolio = props => {
         <div className="filters-content">
           <div className="row portfolio-grid justify-content-center">
             {data.map(d =>
-              d.collections.map(collection => (
+              d.collections.map((collection, i) => (
                 <div
+                  key={i}
                   className={`col-lg-4 col-md-6 all ${String(d.title).replace(
                     / /g,
                     ""

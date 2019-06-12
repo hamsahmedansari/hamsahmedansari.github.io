@@ -10,8 +10,9 @@ const SinglePortfolio = props => {
     d.collections.find(collection => {
       if (collection._id === Number(id)) {
         temp = collection;
-        return false;
+        return true;
       }
+      return false;
     })
   );
   if (Object.entries(temp).length === 0) {
