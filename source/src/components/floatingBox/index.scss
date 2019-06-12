@@ -1,0 +1,88 @@
+.skills {
+  .floatingText {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 800;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    text-transform: uppercase;
+  }
+  #banner {
+    width: 150px;
+    border-radius: 10px;
+    height: 150px;
+    background: #ccc;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    box-shadow: 0px 0px 24px -7px #444;
+  }
+
+  #banner .fill {
+    transform: translateY(150px);
+    animation-name: fillAction;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
+    // animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+  }
+
+  #banner .pour {
+    width: 6px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    bottom: 0;
+    top: 0;
+    // background: #009ae6;
+    animation-name: pourAction;
+    animation-timing-function: linear;
+    animation-duration: 0.25s;
+  }
+
+  #banner #waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    width: 300px;
+    height: 150px;
+    // fill: #04acff;
+  }
+
+  @keyframes pourAction {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fillAction {
+    0% {
+      transform: translateY(150px);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes waveAction {
+    0% {
+      transform: translate(-150px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}
